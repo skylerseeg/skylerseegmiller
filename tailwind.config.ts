@@ -21,11 +21,17 @@ const config: Config = {
         serif: ["var(--font-serif)", "ui-serif", "Georgia", "serif"],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
+        border: "hsl(var(--bone) / 0.1)",
+        input: "hsl(var(--bone) / 0.1)",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ink: "hsl(var(--ink))",
+        bone: "hsl(var(--bone))",
+        sage: {
+          DEFAULT: "hsl(var(--sage))",
+          muted: "hsl(var(--sage) / 0.55)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -59,6 +65,33 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontSize: {
+        display: [
+          "clamp(3rem, 6.5vw, 5.75rem)",
+          { lineHeight: "1.05", letterSpacing: "-0.02em" },
+        ],
+        heading: [
+          "clamp(2rem, 4vw, 3rem)",
+          { lineHeight: "1.1", letterSpacing: "-0.015em" },
+        ],
+        subheading: ["1.25rem", { lineHeight: "1.5" }],
+        "body-lg": ["1.125rem", { lineHeight: "1.7" }],
+        body: ["1rem", { lineHeight: "1.7" }],
+        caption: [
+          "0.75rem",
+          { lineHeight: "1.4", letterSpacing: "0.14em" },
+        ],
+      },
+      spacing: {
+        "section-x": "clamp(1.5rem, 5vw, 3rem)",
+      },
+      backgroundImage: {
+        grain:
+          "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
+      },
+      backgroundSize: {
+        grain: "200px 200px",
       },
     },
   },
