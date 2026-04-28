@@ -3,6 +3,7 @@ import { Building } from "@/components/sections/Building";
 import { Connect } from "@/components/sections/Connect";
 import { Hero } from "@/components/sections/Hero";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SiteNav } from "@/components/SiteNav";
 
 function Divider() {
   return (
@@ -14,15 +15,18 @@ function Divider() {
 
 export default function Page() {
   return (
-    <main>
-      <Hero />
-      <Divider />
-      <Building />
-      <Divider />
-      <Connect />
-      <Divider />
-      <About />
-      <SiteFooter />
-    </main>
+    <>
+      <SiteNav />
+      <main>
+        <Hero />
+        <Divider />
+        <Building />
+        <Divider />
+        <Connect />
+        <Divider />
+        <About />
+        <SiteFooter />
+      </main>
+    </>
   );
 }
