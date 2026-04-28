@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
+
+import { MotionProvider } from "@/components/providers/MotionProvider";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -42,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="bg-ink bg-grain bg-[length:200px_200px] font-sans text-bone antialiased">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );
