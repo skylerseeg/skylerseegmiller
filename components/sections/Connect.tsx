@@ -66,9 +66,9 @@ export function Connect() {
                   className="group flex h-full flex-col gap-6 p-8 transition-colors duration-300 hover:bg-bone/[0.04] md:p-10"
                 >
                   <div className="flex items-start justify-between gap-6">
-                    <span className="text-heading font-serif font-light">
+                    <h3 className="text-heading font-serif font-light">
                       {card.platform}
-                    </span>
+                    </h3>
                     <ArrowUpRight
                       aria-hidden
                       strokeWidth={1.25}

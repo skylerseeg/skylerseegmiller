@@ -69,6 +69,13 @@
     background-color: hsl(var(--sage) / 0.35);
     color: hsl(var(--bone));
   }
+
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex="0"]:focus-visible {
+    @apply rounded-sm outline-none ring-2 ring-sage ring-offset-2 ring-offset-ink;
+  }
 }
 
 @media (max-width: 768px) {

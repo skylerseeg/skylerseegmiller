@@ -14,7 +14,7 @@ export const Section = React.forwardRef<HTMLElement, SectionProps>(
         ref={ref}
         id={id}
         className={cn(
-          "min-h-screen w-full snap-start",
+          "min-h-screen w-full snap-start scroll-mt-24",
           "mx-auto max-w-5xl",
           "px-section-x py-24 md:py-36",
           className

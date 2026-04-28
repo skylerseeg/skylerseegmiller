@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="main">
         <Hero />
         <Divider />
         <Building />
