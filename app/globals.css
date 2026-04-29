@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Palette — 3 colors. Everything else is alpha-derived. */
+    --ink: 24 10% 7%;
+    --bone: 36 28% 92%;
+    --sage: 88 12% 58%;
+    --sage-muted: 88 12% 58%;
+
+    --radius: 0.75rem;
+
+    /* shadcn token mapping — dark-only, both schemes reference the same tokens */
+    --background: 24 10% 7%;
+    --foreground: 36 28% 92%;
+    --card: 24 10% 7%;
+    --card-foreground: 36 28% 92%;
+    --popover: 24 10% 7%;
+    --popover-foreground: 36 28% 92%;
+    --primary: 88 12% 58%;
+    --primary-foreground: 24 10% 7%;
+    --secondary: 36 28% 92%;
+    --secondary-foreground: 24 10% 7%;
+    --muted: 36 28% 92%;
+    --muted-foreground: 36 28% 92%;
+    --accent: 88 12% 58%;
+    --accent-foreground: 24 10% 7%;
+    --destructive: 12 60% 45%;
+    --destructive-foreground: 36 28% 92%;
+    --border: 36 28% 92%;
+    --input: 36 28% 92%;
+    --ring: 88 12% 58%;
+  }
+
+  .dark {
+    --background: 24 10% 7%;
+    --foreground: 36 28% 92%;
+    --card: 24 10% 7%;
+    --card-foreground: 36 28% 92%;
+    --popover: 24 10% 7%;
+    --popover-foreground: 36 28% 92%;
+    --primary: 88 12% 58%;
+    --primary-foreground: 24 10% 7%;
+    --secondary: 36 28% 92%;
+    --secondary-foreground: 24 10% 7%;
+    --muted: 36 28% 92%;
+    --muted-foreground: 36 28% 92%;
+    --accent: 88 12% 58%;
+    --accent-foreground: 24 10% 7%;
+    --destructive: 12 60% 45%;
+    --destructive-foreground: 36 28% 92%;
+    --border: 36 28% 92%;
+    --input: 36 28% 92%;
+    --ring: 88 12% 58%;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: hsl(var(--ink));
+    color: hsl(var(--bone));
+  }
+
+  ::selection {
+    background-color: hsl(var(--sage) / 0.35);
+    color: hsl(var(--bone));
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex="0"]:focus-visible {
+    @apply rounded-sm outline-none ring-2 ring-sage ring-offset-2 ring-offset-ink;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
