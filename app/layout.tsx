@@ -23,7 +23,7 @@ const description =
 export const metadata: Metadata = {
   title: "Skyler Seegmiller",
   description,
-  metadataBase: new URL("https://skylerseegmiller.com"),
+  metadataBase: new URL("https://www.skylerseegmiller.com"),
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Skyler Seegmiller",
     description,
     type: "website",
-    url: "https://skylerseegmiller.com",
+    url: "https://www.skylerseegmiller.com",
     images: [
       {
         url: "/og-image.svg",

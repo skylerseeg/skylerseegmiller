@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://skylerseegmiller.com/sitemap.xml
+Sitemap: https://www.skylerseegmiller.com/sitemap.xml
