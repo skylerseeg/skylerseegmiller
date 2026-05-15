@@ -13,6 +13,19 @@ export type AboutParagraph = {
   italic?: boolean;
 };
 
+export type FieldBridgeImage = {
+  src: string;
+  alt: string;
+};
+
+export type FieldBridgeFeature = {
+  id: string;
+  title: string;
+  description: string;
+  desktopImages: FieldBridgeImage[];
+  mobileImages?: FieldBridgeImage[];
+};
+
 export type Section =
   | {
       id: "hero";
@@ -22,6 +35,12 @@ export type Section =
       nameLast: string;
       sub: string;
       subAccent: string;
+    }
+  | {
+      id: "fieldbridge";
+      kind: "fieldbridge";
+      eyebrow: string;
+      features: FieldBridgeFeature[];
     }
   | {
       id: "building";
@@ -60,6 +79,111 @@ export const SECTIONS: Section[] = [
     nameLast: "Seegmiller",
     sub: "I build software for the construction industry, train hard, make music, and chase clarity. Currently shipping {accent} — a Vista-native SaaS for heavy civil contractors.",
     subAccent: "FieldBridge",
+  },
+  {
+    id: "fieldbridge",
+    kind: "fieldbridge",
+    eyebrow: "INSIDE FIELDBRIDGE",
+    features: [
+      {
+        id: "dashboard",
+        title: "Dashboard",
+        description:
+          "A single operational view stitched live from Vista — active jobs, hours, bids, and the metrics that actually move a heavy civil business.",
+        desktopImages: [
+          {
+            src: "/fieldbridge/fieldbridge_dashboard.png",
+            alt: "FieldBridge dashboard overview pulling live data from Vista",
+          },
+        ],
+      },
+      {
+        id: "bid-intelligence",
+        title: "Bid Intelligence",
+        description:
+          "Win-rate, margin, and historical bid context surfaced before the next number gets sent. Estimators stop guessing what the market will bear.",
+        desktopImages: [
+          {
+            src: "/fieldbridge/bid_intelligence.png",
+            alt: "Bid Intelligence overview — win-rate and margin trends",
+          },
+          {
+            src: "/fieldbridge/bid_intelligence_01.png",
+            alt: "Bid Intelligence — historical bid performance",
+          },
+          {
+            src: "/fieldbridge/bid_intelligence_02.png",
+            alt: "Bid Intelligence — margin analysis by job type",
+          },
+        ],
+      },
+      {
+        id: "jobs",
+        title: "Jobs",
+        description:
+          "Every active job at a glance — schedule, cost-to-complete, crew, and Vista status. The view PMs actually want, without opening Vista.",
+        desktopImages: [
+          {
+            src: "/fieldbridge/jobs.png",
+            alt: "Jobs list — all active jobs with status",
+          },
+          {
+            src: "/fieldbridge/jobs_02.png",
+            alt: "Jobs — detail view with cost and schedule",
+          },
+          {
+            src: "/fieldbridge/jobs_03.png",
+            alt: "Jobs — alternate breakdown view",
+          },
+        ],
+      },
+      {
+        id: "insight-studio",
+        title: "Insight Studio",
+        description:
+          "Build dashboards over Vista data with natural language — no SQL, no BI seat, no waiting on IT. On the phone for the field, on the desktop for the office.",
+        desktopImages: [
+          {
+            src: "/fieldbridge/insight_studio.png",
+            alt: "Insight Studio — desktop dashboard builder",
+          },
+        ],
+        mobileImages: [
+          {
+            src: "/fieldbridge/insight_studio_01.png",
+            alt: "Insight Studio mobile — chart view",
+          },
+          {
+            src: "/fieldbridge/insight_studio_02.png",
+            alt: "Insight Studio mobile — natural language query",
+          },
+          {
+            src: "/fieldbridge/insight_studio_03.png",
+            alt: "Insight Studio mobile — data drill-down",
+          },
+          {
+            src: "/fieldbridge/insight_studio_04.png",
+            alt: "Insight Studio mobile — saved dashboards",
+          },
+        ],
+      },
+      {
+        id: "time-cards",
+        title: "Time Cards",
+        description:
+          "Field-grade time entry that posts cleanly into Vista. No clipboard re-entry on Monday morning, no payroll cleanup on Friday afternoon.",
+        desktopImages: [
+          {
+            src: "/fieldbridge/time_cards.png",
+            alt: "Time Cards — crew time entry view",
+          },
+          {
+            src: "/fieldbridge/time_cards_01.png",
+            alt: "Time Cards — daily summary view",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "building",

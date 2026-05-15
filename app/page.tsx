@@ -1,6 +1,7 @@
 import { About } from "@/components/sections/About";
 import { Building } from "@/components/sections/Building";
 import { Connect } from "@/components/sections/Connect";
+import { FieldBridge } from "@/components/sections/FieldBridge";
 import { Hero } from "@/components/sections/Hero";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
@@ -19,6 +20,8 @@ export default function Page() {
       <SiteNav />
       <main id="main">
         <Hero />
+        <Divider />
+        <FieldBridge />
         <Divider />
         <Building />
         <Divider />

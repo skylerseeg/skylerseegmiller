@@ -47,7 +47,12 @@ export function Hero() {
 
         <p className="mt-10 max-w-xl text-body-lg text-bone/80">
           {beforeAccent}
-          <span className="text-sage">{data.subAccent}</span>
+          <a
+            href="#fieldbridge"
+            className="text-sage underline-offset-4 transition-colors hover:text-bone hover:underline"
+          >
+            {data.subAccent}
+          </a>
           {afterAccent}
         </p>
       </motion.div>
