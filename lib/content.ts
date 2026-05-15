@@ -204,9 +204,9 @@ export const SECTIONS: Section[] = [
     cards: [
       {
         platform: "X",
-        href: "https://x.com/skylerseegmiller",
+        href: "https://x.com/SkylerSeeg",
         description: "Builder notes, market commentary, half-formed ideas.",
-        handle: "@skylerseegmiller",
+        handle: "@SkylerSeeg",
       },
       {
         platform: "YouTube",
@@ -216,9 +216,9 @@ export const SECTIONS: Section[] = [
       },
       {
         platform: "Instagram",
-        href: "https://instagram.com/skylerseegmiller",
+        href: "https://instagram.com/SkylerSeeg",
         description: "Studio, family, training, life.",
-        handle: "@skylerseegmiller",
+        handle: "@SkylerSeeg",
       },
       {
         platform: "Facebook",
